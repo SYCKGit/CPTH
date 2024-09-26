@@ -3,6 +3,7 @@
   "displayName": "CP Template Helper",
   "description": "",
   "version": "1.0.0",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/SYCKGit/CPTH"
