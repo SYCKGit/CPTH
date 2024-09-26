@@ -2,7 +2,7 @@
   "name": "cp-template-helper",
   "displayName": "CP Template Helper",
   "description": "A Visual Studio Code Extension to help with your competitive programming templates",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "publisher": "OviyanGandhi",
   "license": "MIT",
   "repository": {
