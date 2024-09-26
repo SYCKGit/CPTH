@@ -1,5 +1,6 @@
 # CP Template Helper
 [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/SYCKGit/CPTH)
+[![Visual Studio Code Marketplace](https://img.shields.io/badge/VSCode-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white)](https://marketplace.visualstudio.com/items?itemName=OviyanGandhi.cp-template-helper)
 
 A Visual Studio Code extension to effortlessly import your competitive programming templates!
 
