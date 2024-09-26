@@ -3,6 +3,7 @@
   "displayName": "CP Template Helper",
   "description": "A Visual Studio Code Extension to help with your competitive programming templates",
   "version": "1.0.0",
+  "publisher": "OviyanGandhi",
   "license": "MIT",
   "repository": {
     "type": "git",
