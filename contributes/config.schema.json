@@ -1,0 +1,63 @@
+{
+  "title": "CP Template Helper Config",
+  "description": "The configuration for the CP Template Helper Extension",
+  "type": "object",
+  "properties": {
+    "templates": {
+      "type": "array",
+      "description": "The list of templates to be used by the extension",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The keyword to be used to trigger the template"
+          },
+          "type": {
+            "type": "string",
+            "enum": ["ds", "algo", "alias", "macro"],
+            "default": "alias",
+            "description": "The type of the template"
+          },
+          "requires": {
+            "type": "array",
+            "description": "The list of other templates that this template requires",
+            "items": {
+              "type": "string"
+            }
+          },
+          "template": {
+            "oneOf": [
+              {
+                "type": "string",
+                "description": "The template to be used"
+              },
+              {
+                "type": "array",
+                "description": "The list of lines to be used as the template",
+                "items": {
+                  "type": "string"
+                }
+              }
+            ]
+          }
+        },
+        "required": ["name", "template"]
+      }
+    },
+    "extends": {
+      "type": "array",
+      "description": "The list of other config files to include inside this config file",
+      "items": {
+        "type": "string"
+      }
+    },
+    "includes": {
+      "type": "array",
+      "description": "The list of template files or directories to include inside this config file",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

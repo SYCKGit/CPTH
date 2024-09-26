@@ -1,0 +1,23 @@
+{
+	"CPTH Markers": {
+		"prefix": "cpth",
+		"body": [
+      "// MACROS",
+			"// ALIASES",
+			"// DATA STRUCTURES",
+      "// ALGORITHMS",
+      "// MAIN"
+		],
+		"description": "The comments required for the CP Template Helper to work"
+	},
+  "CPTH Template": {
+    "prefix": "tcpth",
+    "body": [
+      "// @template $1",
+      "// @requires $2",
+      "",
+      "// START ${3|DATA STRUCTURE,ALGORITHM|}"
+    ],
+    "description": "The template for a new CP Template Helper template"
+  }
+}
