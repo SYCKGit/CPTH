@@ -12,7 +12,7 @@ export function getTemplates(templates: Template[], template: Template, texts: s
   if (texts[0].includes(template.template) || texts.includes(template.template)) {
     return null;
   }
-  texts.push(template.name);
+  texts.push(template.template);
   const ret = {
     ds: "",
     algo: "",
@@ -24,17 +24,14 @@ export function getTemplates(templates: Template[], template: Template, texts: s
     if (t) {
       const content = getTemplates(templates, t, texts);
       if (content) {
-        if (content.ds) {
-          ret.ds += content.ds;
-        }
-        if (content.algo) {
-          ret.algo += content.algo;
-        }
-        if (content.alias) {
-          ret.alias += content.alias;
-        }
-        if (content.macro) {
-          ret.macro += content.macro;
+        const keys: TemplateType[] = Object.keys(content) as TemplateType[];
+        for (const key of keys) {
+          if (content[key]) {
+            if (ret[key]) {
+              ret[key] += "\n";
+            }
+            ret[key] += content[key];
+          }
         }
       }
     } else {
