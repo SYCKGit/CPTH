@@ -94,6 +94,7 @@ export async function activate(context: vscode.ExtensionContext) {
           insertText(edits, lines.macro, content.macro + (macroSpace ? "\n" : ""));
         }
         completion.additionalTextEdits = edits;
+        completion.commitCharacters = [" ", "\n"];
         return completion;
       }).filter(c => c !== null);
     }
