@@ -91,7 +91,6 @@ export async function parseConfig(fp: string = "cpth.config.json"): Promise<Conf
       return;
     }
     if (Array.isArray(t.template)) {
-      logger.info(`${t.name} is an array`);
       t.template = t.template.join("\n");
     }
     if (t.type === "ds" || t.type === "algo") {
