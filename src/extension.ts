@@ -73,7 +73,7 @@ export async function activate(context: vscode.ExtensionContext) {
         lines.alias--;
       }
 
-      return config.templates.map(t => {
+      const completions = config.templates.map(t => {
         const content = getTemplates(config.templates, t, [text]);
         if (!content) {
           return null;
@@ -94,9 +94,12 @@ export async function activate(context: vscode.ExtensionContext) {
           insertText(edits, lines.macro, content.macro + (macroSpace ? "\n" : ""));
         }
         completion.additionalTextEdits = edits;
-        completion.commitCharacters = [" ", "\n", "<"];
+        if (document.getText(new vscode.Range(position.with(undefined, position.character - t.name.length), position)) === t.name) {
+          completion.commitCharacters = [" ", "\n", "<"];
+        }
         return completion;
       }).filter(c => c !== null);
+      return new vscode.CompletionList(completions, true);
     }
   });
 
