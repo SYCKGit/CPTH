@@ -5,6 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.5] - 2024-10-06
+
+### Fixed
+
+- Fixed templates being inserted on space after prefix. For example if you have a template `INF` and write `int i` and add space after this, it will change the `i` to `INF` as `i` is a prefix of `INF`. The extension now only adds the commit characters when the full template is written.
+
 ## [1.0.4] - 2024-09-30
 
 ### Added
